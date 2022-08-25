@@ -6,7 +6,7 @@ async function SearchFetch(e){
         return;
     }
     console.log(e.target.value);
-    let response = await fetch(`http://omdbapi.com/?apikey=33e7e6c6&s=${e.target.value}`);
+    let response = await fetch(`https://omdbapi.com/?apikey=33e7e6c6&s=${e.target.value}`);
     let movies = await response.json();
     console.log(movies);
     if(movies.Response === 'False'){
@@ -24,7 +24,7 @@ function noMovieFound(){
 // funciton to search movie by the ID
 async function FetchFullMovie(e){
     console.log(e.currentTarget.imdbID);
-    let response = await fetch(`http://omdbapi.com/?apikey=33e7e6c6&i=${e.currentTarget.imdbID}`);
+    let response = await fetch(`https://omdbapi.com/?apikey=33e7e6c6&i=${e.currentTarget.imdbID}`);
     let movie = await response.json();
     console.log(movie);
     updateInputText(movie.Title);
