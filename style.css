@@ -1,0 +1,424 @@
+/* font  */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500&display=swap');
+/* font-family: 'Cinzel', serif; */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Cinzel', serif;
+}
+
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+body{
+    min-height: 100vh;
+}
+
+nav{
+    padding: 0.5rem;
+    display: flex;
+    gap: 0.5rem;
+    justify-content: right;
+    align-items: center;
+}
+
+nav a {
+    font-size: small;
+    color: grey;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: rgba(34, 30, 30, 0.867);
+}
+
+nav button{
+    min-width: 5rem;
+    background-color: rgba(40, 40, 212, 0.861);
+    color: white;
+    border-radius: 4px;
+    border: none;
+    padding: 0.5rem 1rem;
+}
+nav button:hover{
+    background-color: rgba(26, 26, 145, 0.861);
+}
+
+
+.logo{
+    margin-top: 1.5rem;
+}
+
+.logo h1 span { 
+    font-size: 5rem;
+}
+
+.search-container{
+    padding: 0.5rem;  
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.search { 
+    
+    margin: auto;
+    margin-top: 1rem;
+    max-width: 45rem;
+    height: 2.5rem;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.2rem 1rem;
+    border-radius: 1.5rem;
+    box-shadow: 0 2px 4px 2px rgb(213, 209, 209);
+}
+
+input{
+    min-width: 30rem;
+    outline: none;
+    border: none;
+    flex: 1 1;
+    padding: 0 0.2rem;
+    height: 2rem;
+}
+
+
+.language-links{
+    margin-top: 1rem;
+}
+
+footer{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(207, 207, 207);
+    padding: 1rem 2rem;
+    transition: opacity 0.4s linear;
+}
+
+footer:hover{
+    opacity: 0.5;
+}
+
+
+footer .location{
+    border-bottom: 1px solid grey;
+    padding-bottom: 0.5rem;
+}
+
+.links{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.5rem;
+}
+
+.link-set1{
+    display: flex;
+    gap: 0.8rem;
+}
+.link-set2{
+    display: flex;
+    gap: 0.8rem;
+}
+
+a{
+    text-decoration: none;
+    color: rgb(93, 93, 93);
+    min-width: max-content;
+}
+
+a:hover{
+    text-decoration: none;
+    color: rgb(43, 42, 42);
+    text-decoration: underline;
+}
+
+
+.G{
+    color: rgb(13, 13, 205);
+}
+.o1{
+    color: rgb(247, 40, 40);
+}
+.o2{
+    color: rgb(232, 232, 42);
+}
+.g{
+    color: rgb(13, 13, 205);
+}
+.l{
+    color: rgb(46, 171, 46);
+}
+.e{
+    color: rgb(247, 40, 40);
+}
+
+
+/* seatch results style */
+
+.search-results{
+    position : absolute;
+    top: 100%;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 2px 4px 2px rgb(204, 203, 203);
+    padding: 0 0.5rem 0.5rem 0.5rem;
+    border-radius: 0.4rem;
+    min-width: 30rem;
+    min-height: 35vh;
+    max-height: 40vh;
+    overflow: auto;
+}
+
+
+.searchItem{
+    cursor: pointer;
+    display: flex;
+    box-shadow: 0 0 3px 1px rgb(188, 187, 187);
+    padding: 0.4rem;
+    border-radius: 0.2rem;
+    margin-top: 0.7rem;
+    background-image: linear-gradient(320deg, #276d8d, #03a9f4);
+    transition: box-shadow 0.5s ease;
+}
+.searchItem:hover{
+    box-shadow: 0 0 3px 2px #607d8b;
+    background-image: linear-gradient(320deg, #abe5ff, #00b0ff)
+}
+
+.poster{
+    max-width: 3rem;
+}
+img{
+    width: 100%;
+}
+.movieNameYear{
+    margin-left: 0.5rem;
+}
+
+/* selected movie style */
+
+.SelectedMovie{
+    padding: 2rem 4rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+
+}
+.section1, .section2{
+    background-image: linear-gradient(179deg, #03a9f4, #004462);
+    padding: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 0 2px 1px rgb(233, 232, 232);
+    transition: box-shadow 0.4s ease;
+}
+
+.section1:hover, .section2:hover{
+    box-shadow: 0 0 4px 2px rgb(138, 137, 137);
+}
+.movie-header{
+    display: flex;
+    gap: 0.2rem;
+}
+
+.image-container{
+    width: 6rem;
+    border-top: 2px solid rgb(81, 81, 81);
+    overflow: hidden;
+}
+
+.image-container img{
+    max-width: 100%;
+}
+
+.movie-section-style{
+    background-color: white;
+    box-shadow: 0 0 4px 1px rgb(210, 210, 210);
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+    border-radius: 5px;
+}
+
+p{
+    font-weight: 600;
+}
+h3{
+    font-weight: 700;
+    font-size: x-large;
+}
+
+@media screen and (max-width : 600px){
+    .links{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    html{
+        font-size: 10px;
+    }
+    button{
+        font-size: 1rem;
+    }
+
+    .search{
+        margin: auto ;
+    }
+    input{
+        min-width: 15rem;
+        width: 15rem;
+    }
+    .search-results{
+        min-width: 12rem;
+        max-width: 15rem;
+    }
+
+    .search-results{
+        min-height: 20vh;
+        max-height: 50vh;
+    }
+/* selected movie style */
+    .SelectedMovie{
+        grid-template-columns: 1fr ;
+        gap: 1rem;
+    
+    }
+    .movie-section-style{
+        background-color: white;
+        box-shadow: 0 0 2px 1px rgb(210, 210, 210);
+        padding: 0.5rem;
+        margin-top: 0.8rem;
+        border-radius: 3px;
+    }
+
+    /* p and h */
+    p{
+        font-weight: 400;
+        font-size: x-small;
+    }
+    h3{
+        font-weight: 500;
+        font-size: small;
+    }
+}
+
+
+/* scrollbar */
+
+::-webkit-scrollbar-thumb {
+    background: red;
+    border-radius: 10px;
+  }
+
+  /* display none */
+
+  .display-none{
+    display: none;
+}
+
+/* no movie found */
+
+.noMovieFound{
+    font-size: larger;
+    color: #004462;
+    text-align: center;
+    transform-origin: center;
+    animation: nomovie-found 0.5s linear 2; 
+}
+
+@keyframes nomovie-found{
+    from{
+        transform: rotateZ(0deg)
+    }
+    25%{
+        transform: rotateZ(15deg);
+    }
+    50%{
+        transform: rotateZ(0deg);
+    }
+    75%{
+        transform: rotateZ(-15deg);
+    }
+    to{
+        transform: rotateZ(0deg);
+    }
+}
+
+/* icon style */
+.skull{
+    cursor: pointer;
+    color: rgb(192, 82, 82);
+    font-size: 2rem;
+    transition: color 0.5s ease, trannsform 0.5s ease;
+}
+
+.skull:hover{
+    color: rgb(146, 5, 5);
+    transform: scale(1.1);
+}
+
+/* start animation */
+
+.start-animation{
+    flex-direction: column;
+}
+
+.start-animation span{
+    margin: 0;
+    padding: 0;
+    font-size: 5rem;
+    font-weight: bolder;
+}
+
+.dots{
+    display: flex;
+    gap: 1rem;
+}
+.d1{
+    color: Blue;
+    animation: start-animation 1s ease-in-out 0.2s infinite; 
+}
+.d2{
+    color: red;
+    animation: start-animation 1s ease-in-out 0.4s infinite; 
+}
+.d3{
+    color: yellow;
+    animation: start-animation 1s ease-in-out 0.6s infinite; 
+}
+.d4{
+    color: blue;
+    animation: start-animation 1s ease-in-out 0.8s infinite; 
+}
+.d5{
+    color: green;
+    animation: start-animation 1s ease-in-out 1s infinite; 
+}
+.d6{
+    color: red;
+    animation: start-animation 1s ease-in-out 1.2s infinite; 
+}
+
+
+@keyframes start-animation{
+    from{
+        transform: translateY(0)
+    }
+    50%{
+        transform: translateY(-1rem);
+    }
+    to{
+        transform: translateY(0rem);
+    }
+}
+
+/* quicklink */
+
+.quick-link{
+    font-size: 2rem;
+}
