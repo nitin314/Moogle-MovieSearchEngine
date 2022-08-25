@@ -269,14 +269,16 @@ h3{
     .search{
         margin: auto ;
     }
+    
     input{
         min-width: 15rem;
-        width: 15rem;
+        width: 25rem;
     }
     .search-results{
         min-width: 12rem;
-        max-width: 15rem;
+        max-width: 25rem;
     }
+    
 
     .search-results{
         min-height: 20vh;
